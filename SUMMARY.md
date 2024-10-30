@@ -1,17 +1,16 @@
 # Table of contents
 
-* [Welcome](README.md)
+* [Welcome to vRP3's documentation](README.md)
 
 ## Getting Started
 
-* [Quickstart](getting-started/quickstart.md)
-* [Publish your docs](getting-started/publish-your-docs.md)
+* [Understanding vRP](getting-started/quickstart.md)
 
-## Basics
+## Concepts
 
-* [Editor](basics/editor.md)
-* [Markdown](basics/markdown.md)
-* [Images & media](basics/images-and-media.md)
-* [Interactive blocks](basics/interactive-blocks.md)
-* [OpenAPI](basics/openapi.md)
-* [Integrations](basics/integrations.md)
+* [OOP](concepts/editor.md)
+* [Markdown](concepts/markdown.md)
+* [Images & media](concepts/images-and-media.md)
+* [Interactive blocks](concepts/interactive-blocks.md)
+* [OpenAPI](concepts/openapi.md)
+* [Integrations](concepts/integrations.md)

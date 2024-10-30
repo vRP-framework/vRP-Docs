@@ -1,27 +1,56 @@
 ---
 icon: bullseye-arrow
+description: This page aims to help you understand how vRP works, and how it is used.
 ---
 
-# Quickstart
+# Understanding vRP
 
-<figure><img src="https://gitbookio.github.io/onboarding-template-images/quickstart-hero.png" alt=""><figcaption></figcaption></figure>
 
-Beautiful documentation starts with the content you create — and GitBook makes it easy to get started with any pre-existing content.
+
+## Concepts
+
+### OOP
+
+vRP 3 Object-Oriented Programming uses the [Luaoop](https://github.com/ImagicTheCat/Luaoop) library.
 
 {% hint style="info" %}
-Want to learn about writing content from scratch? Head to the [Basics](https://github.com/GitbookIO/onboarding-template/blob/main/getting-started/broken-reference/README.md) section to learn more.
+By using OOP, instead of loading resources communicating with vRP through Proxy, extensions can directly be loaded into the vRP resource context. Each extension keeps its data and is able to access other extensions data and methods, making extending vRP easier, more powerful (we can access stuff even if not exposed) and with less overhead.
 {% endhint %}
 
-### Import
+### Asynchronous <a href="#asynchronous" id="asynchronous"></a>
 
-GitBook supports importing content from many popular writing tools and formats. If your content already exists, you can upload a file or group of files to be imported.
+vRP 3 extensively uses asynchronous tasks in a transparent way using coroutines, some functions may not return immediately (or never).
 
-<div data-full-width="false">
+### DB driver <a href="#db_driver" id="db_driver"></a>
 
-<figure><img src="https://gitbookio.github.io/onboarding-template-images/quickstart-import.png" alt=""><figcaption></figcaption></figure>
+A DB driver is a class handling MySQL queries. When the vRP MySQL API is used, the DB driver methods are called to process the queries. If the DB driver is not loaded yet, queries will be cached until loaded.
 
-</div>
+### Proxy and Tunnel <a href="#proxy_and_tunnel" id="proxy_and_tunnel"></a>
 
-### Sync a repository
+The proxy library is used to call other resources functions through a proxy event.
 
-GitBook also allows you to set up a bi-directional sync with an existing repository on GitHub or GitLab. Setting up Git Sync allows you and your team to write content in GitBook or in code, and never have to worry about your content becoming out of sync.
+The idea behind tunnel is to easily access any exposed server function from any client resource, and to access any exposed client function from any server resource.
+
+{% hint style="info" %}
+Good practice is to get the interface once and set it as a global. If we want to get multiple times the same interface from the same resource, we need to specify a unique identifier (the name of the resource + a unique id for each one).
+{% endhint %}
+
+{% hint style="info" %}
+Tunnel and Proxy are blocking calls in the current coroutine until the values are returned, to bypass this behaviour, especially for the Tunnel to optimize speed (ping latency of each call), use `_` as a prefix for the function name (Proxy/Tunnel interfaces should not have functions starting with `_`). This will discard the returned values, but if we still need them, we can make normal calls in a new Citizen thread with `Citizen.CreateThreadNow` or `async` to have non-blocking code.
+{% endhint %}
+
+{% hint style="info" %}
+Also remember that Citizen event handlers (used by Proxy and Tunnel) may not work while loading the resource; to use the Proxy at loading time, we will need to delay it with `Citizen.CreateThread` or a `SetTimeout`.
+{% endhint %}
+
+### Data
+
+#### Multi-server and character
+
+vRP 3 has multi-server and multi-character support. Each server has a string identifier.
+
+
+
+{% hint style="info" %}
+Players can use another character after spawned, thus entensions should properly handle character load/unload events and check if the character is ready
+{% endhint %}
