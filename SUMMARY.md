@@ -1,16 +1,25 @@
 # Table of contents
 
-* [Welcome to vRP3's documentation](README.md)
-
 ## Getting Started
 
-* [Understanding vRP](getting-started/quickstart.md)
-
-## Concepts
-
-* [OOP](concepts/editor.md)
-* [Markdown](concepts/markdown.md)
-* [Images & media](concepts/images-and-media.md)
-* [Interactive blocks](concepts/interactive-blocks.md)
-* [OpenAPI](concepts/openapi.md)
-* [Integrations](concepts/integrations.md)
+* [vRP Developer Documentation](README.md)
+* [Getting Started](getting-started/getting-started.md)
+* [Core Concepts](getting-started/editor/README.md)
+  * [OOP](getting-started/editor/oop.md)
+  * [Asynchronous](getting-started/editor/asynchronous.md)
+  * [DB Driver](getting-started/editor/db-driver.md)
+  * [Proxy and Tunnel](getting-started/editor/proxy-and-tunnel.md)
+  * [Data](getting-started/editor/data.md)
+  * [Extension](getting-started/editor/extension.md)
+* [General API](getting-started/general-api.md)
+* [vRP modules](getting-started/vrp-modules/README.md)
+  * [Admin Module](getting-started/vrp-modules/admin-module.md)
+  * [Base Module](getting-started/vrp-modules/base-module.md)
+  * [Garage Module](getting-started/vrp-modules/garage-module.md)
+  * [Group Module](getting-started/vrp-modules/group-module.md)
+  * [Inventory Module](getting-started/vrp-modules/inventory-module.md)
+  * [Mission Module](getting-started/vrp-modules/mission-module.md)
+  * [Money Module](getting-started/vrp-modules/money-module.md)
+  * [Phone Module](getting-started/vrp-modules/phone-module.md)
+  * [Police Module](getting-started/vrp-modules/police-module.md)
+  * [Shop Module](getting-started/vrp-modules/shop-module.md)

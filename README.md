@@ -1,27 +1,25 @@
 ---
-icon: hand-wave
-cover: https://gitbookio.github.io/onboarding-template-images/header.png
-coverY: 0
-layout:
-  cover:
-    visible: true
-    size: full
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
+description: >-
+  Welcome to the vRP framework documentation. This guide will help you
+  understand and develop with the vRP framework.
+icon: bullseye-arrow
 ---
 
-# Welcome to vRP3's documentation
+# vRP Developer Documentation
 
-vRP3 is still heavily work in progress. With that being said, the documentation will be incomplete for that time.
+`Disclaimer: This is only for version 2(vRP2) of the framework. This doesn't apply to any previous versions of vRP.`
 
-### Jump right in
+### Quick Start
 
-<table data-view="cards"><thead><tr><th></th><th></th><th data-hidden data-card-cover data-type="files"></th><th data-hidden></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><strong>Getting Started</strong></td><td>Create your first script</td><td></td><td></td><td><a href="getting-started/quickstart.md">quickstart.md</a></td></tr><tr><td><strong>Basics</strong></td><td>Learn the basics of vRP3</td><td></td><td></td><td><a href="broken-reference">Broken link</a></td></tr></tbody></table>
+vRP is a powerful roleplay framework for FiveM that provides:
+
+* Object-oriented programming with Luaoop
+* Asynchronous task handling
+* Multi-server and multi-character support
+* Comprehensive module system
+* Database integration
+* Client-server communication
+
+### Support
+
+For additional support and community resources, visit the vRP community forums and GitHub repositories.
