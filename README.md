@@ -1,13 +1,13 @@
 ---
 description: >-
-  Welcome to the vRP framework documentation. This guide will help you
-  understand and develop with the vRP framework.
+  Welcome to the official documentation page for the vRP framework. This guide
+  will help you understand the vRP framework and its functions.
 icon: bullseye-arrow
 ---
 
 # vRP Developer Documentation
 
-`Disclaimer: This is only for version 2(vRP2) of the framework. This doesn't apply to any previous versions of vRP.`
+`Disclaimer: This is only for vRP2, version 2 of the framework. This doesn't apply to any previous versions of vRP.`
 
 ### Quick Start
 
@@ -22,4 +22,4 @@ vRP is a powerful roleplay framework for FiveM that provides:
 
 ### Support
 
-For additional support and community resources, visit the vRP community forums and GitHub repositories.
+For additional support and community resources, visit the vRP community forums, [discord server](https://discord.gg/yFfj2pbe6d), or GitHub repositories.
